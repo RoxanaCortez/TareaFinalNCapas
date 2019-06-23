@@ -17,6 +17,8 @@ public class SucursalService {
 		return (List<Sucursal>) repo.findAll();
 	}
 	
-	
+	public void save(Sucursal sucursal) {
+		repo.save(sucursal);
+	}
 
 }

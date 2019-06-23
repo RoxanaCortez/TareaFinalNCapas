@@ -1,6 +1,5 @@
 package com.uca.capas.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +15,10 @@ public class Sucursal {
 	
 	private String nombre;
 	private String ubicacion;
-	private String horarios;
 	private Integer mesas;
 	private String gerente;
+	private String horario_a;
+	private String horario_c;
 	
 	
 	
@@ -45,12 +45,7 @@ public class Sucursal {
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
 	}
-	public String getHorarios() {
-		return horarios;
-	}
-	public void setHorarios(String horarios) {
-		this.horarios = horarios;
-	}
+	
 	public Integer getMesas() {
 		return mesas;
 	}
@@ -64,7 +59,21 @@ public class Sucursal {
 		this.gerente = gerente;
 	}
 	
-	
+	public String getHorario_a() {
+		return horario_a;
+	}
+
+	public void setHorario_a(String horario_a) {
+		this.horario_a = horario_a;
+	}
+
+	public String getHorario_c() {
+		return horario_c;
+	}
+
+	public void setHorario_c(String horario_c) {
+		this.horario_c = horario_c;
+	}
 	
 	
 	

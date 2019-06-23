@@ -18,22 +18,27 @@
 		<input type="submit" value="search"/>
 	</form>
 	
-	<table>
+	<h3> <a href="new">Agregar nueva sucursal</a></h3>
+	
+	<table border="1" padding="5" >
 		<tr>
-			<th>Codigo</th>
-			<th>Nombre</th>
-			<th>Ubicacion</th>
-			<th>Horario</th>
-			<th>Mesas</th>
-			<th>Gerente</th>
+			<th style="text-align: center;">Codigo</th>
+			<th style="text-align: center;">Nombre</th>
+			<th style="text-align: center;">Ubicacion</th>
+			<th style="text-align: center;">Horario Apertura</th>
+			<th style="text-align: center;">Horario Cierre</th>
+			<th style="text-align: center;">Mesas</th>
+			<th style="text-align: center;">Gerente</th>
+			<th style="text-align: center;">Acción</th>
 		</tr>
 		<c:forEach items="${listSucursal}" var="sucursal">
 		<tr>
-		<td>${sucursal.codigo}</td>
+		<td style="text-align: center;">${sucursal.codigo}</td>
 		<td>${sucursal.nombre}</td>
 		<td>${sucursal.ubicacion}</td>
-		<td>${sucursal.horarios}</td>
-		<td>${sucursal.mesas}</td>
+		<td style="text-align: center;">${sucursal.horario_a}</td>
+		<td style="text-align: center;">${sucursal.horario_c}</td>
+		<td style="text-align: center;">${sucursal.mesas}</td>
 		<td>${sucursal.gerente}</td>
 		</tr>
 		</c:forEach>
