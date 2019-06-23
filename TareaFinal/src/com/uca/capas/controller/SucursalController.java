@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.uca.capas.domain.Sucursal;
@@ -43,6 +44,30 @@ public class SucursalController {
 		
 		return "redirect:/";
 		
+	}
+	
+	@RequestMapping("/edit")
+	public ModelAndView editarSucursalForm(@RequestParam Integer codigo) {
+		ModelAndView mav = new ModelAndView("editar_sucursal");
+		Sucursal sucursal = service.get(codigo);
+		mav.addObject("sucursal", sucursal);
+		return mav;
+		
+	}
+	
+	@RequestMapping("/perfil")
+	public ModelAndView perfilSucursalForm(@RequestParam Integer codigo) {
+		ModelAndView mav = new ModelAndView("perfil_sucursal");
+		Sucursal sucursal = service.get(codigo);
+		mav.addObject("sucursal", sucursal);
+		return mav;
+		
+	}
+	
+	@RequestMapping("/delete")
+	public String eliminarSucursal(@RequestParam Integer codigo) {
+		service.delete(codigo);
+		return "redirect:/";
 	}
 
 }

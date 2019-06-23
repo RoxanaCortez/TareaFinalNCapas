@@ -40,6 +40,11 @@
 		<td style="text-align: center;">${sucursal.horario_c}</td>
 		<td style="text-align: center;">${sucursal.mesas}</td>
 		<td>${sucursal.gerente}</td>
+		<td>
+			<a href="edit?codigo=${sucursal.codigo}">Editar</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="delete?codigo=${sucursal.codigo}">Delete</a>
+		</td>
 		</tr>
 		</c:forEach>
 	

@@ -1,6 +1,7 @@
 package com.uca.capas.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,13 @@ public class SucursalService {
 	public void save(Sucursal sucursal) {
 		repo.save(sucursal);
 	}
-
+	
+	public Sucursal get(Integer codigo) {
+		Optional<Sucursal> result = repo.findById(codigo);
+		return result.get();
+	}
+	
+	public void delete(Integer codigo) {
+	repo.deleteById(codigo);
+	}
 }
