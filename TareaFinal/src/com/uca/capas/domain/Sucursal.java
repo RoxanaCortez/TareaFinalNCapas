@@ -12,63 +12,63 @@ public class Sucursal {
 	@Id
 	@GeneratedValue(generator="sucursal_code_sucursal_seq" , strategy=GenerationType.AUTO)
 	@SequenceGenerator(name="sucursal_code_seq" , sequenceName="public.sucursal_code_sucursal_seq" , allocationSize =1)
+	private Integer codigo;
 	
-	@Column(name="codigo")
-	private Integer cCodigo;
-	
-	@Column(name="horarios")
-	private String hHorarios;
-	
-	@Column(name="nMesas")
-	private Integer numMesas;
-	
-	@Column(name="nomGerente")
-	private String nGerente;
-	
-	@Column(name="ubicacion")
-	private String uUbicacion;
+	private String nombre;
+	private String ubicacion;
+	private String horarios;
+	private Integer mesas;
+	private String gerente;
 	
 	
 	
 	
-	public Sucursal(Integer cCodigo, String hHorarios, Integer numMesas, String nGerente, String uUbicacion) {
-		super();
-		this.cCodigo = cCodigo;
-		this.hHorarios = hHorarios;
-		this.numMesas = numMesas;
-		this.nGerente = nGerente;
-		this.uUbicacion = uUbicacion;
+	public Sucursal() {
+	
 	}
 	
-	public Integer getcCodigo() {
-		return cCodigo;
+	public Integer getCodigo() {
+		return codigo;
 	}
-	public void setcCodigo(Integer cCodigo) {
-		this.cCodigo = cCodigo;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
-	public String gethHorarios() {
-		return hHorarios;
+	public String getNombre() {
+		return nombre;
 	}
-	public void sethHorarios(String hHorarios) {
-		this.hHorarios = hHorarios;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
-	public Integer getNumMesas() {
-		return numMesas;
+	public String getUbicacion() {
+		return ubicacion;
 	}
-	public void setNumMesas(Integer numMesas) {
-		this.numMesas = numMesas;
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
 	}
-	public String getnGerente() {
-		return nGerente;
+	public String getHorarios() {
+		return horarios;
 	}
-	public void setnGerente(String nGerente) {
-		this.nGerente = nGerente;
+	public void setHorarios(String horarios) {
+		this.horarios = horarios;
 	}
-	public String getuUbicacion() {
-		return uUbicacion;
+	public Integer getMesas() {
+		return mesas;
 	}
-	public void setuUbicacion(String uUbicacion) {
-		this.uUbicacion = uUbicacion;
+	public void setMesas(Integer mesas) {
+		this.mesas = mesas;
 	}
+	public String getGerente() {
+		return gerente;
+	}
+	public void setGerente(String gerente) {
+		this.gerente = gerente;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 }
