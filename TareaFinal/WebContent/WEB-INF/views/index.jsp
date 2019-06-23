@@ -44,6 +44,9 @@
 			<a href="edit?codigo=${sucursal.codigo}">Editar</a>
 			&nbsp;&nbsp;&nbsp;
 			<a href="delete?codigo=${sucursal.codigo}">Delete</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="perfil?codigo=${sucursal.codigo}">Ver perfil</a>
+			
 		</td>
 		</tr>
 		</c:forEach>
