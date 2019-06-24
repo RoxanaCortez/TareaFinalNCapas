@@ -1,49 +1,44 @@
 package com.uca.capas.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
-@Entity
+@Entity(name = "usuario")
 public class Usuario {
-	
+
 	@Id
-	@GeneratedValue(generator="usuario_code_usuario_seq" , strategy=GenerationType.AUTO)
-	@SequenceGenerator(name="usuario_code_seq" , sequenceName="public.usuario_code_usuario_seq" , allocationSize =1)
-	private Integer id;
-	
-	private String nombre;
+	@Column(name = "user")
 
+    @Size(min = 3, max = 20, message = "El nombre debe tener mas de 3 letras y menos de 20.")
+	private String user;
 	
-	
-	
-	public Usuario() {
-		
-	}
-	
-	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getPassword() {
-		return password;
+	@Column(name = "pass")
+	@Pattern(regexp = "^[a-zA-Z]", message= "Debe contener solo letras")
+	private String pass;
+
+	public String getUser() {
+		return user;
 	}
 
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUser(String user) {
+		this.user = user;
 	}
-	private String password ;
 
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+	
+	
+	
 }

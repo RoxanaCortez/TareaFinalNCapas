@@ -9,6 +9,62 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Nueva Sucursal</title>
+<style>
+html,
+body {
+	height: 100%;
+	font-family: monospace;
+}
+
+h1{
+	color: #000;
+	text-align: center;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+h2{
+	color: #000;
+	text-align: center;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+p{
+	color: #787777;
+	 font-size: 18px;
+	
+}
+
+body {
+	margin: 0;
+	background:  #fff;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[type=submit] {
+  background-color: #8B0065;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size:12px;
+  line-height: 1.4;
+  padding: 10px;
+  width: 120px;
+  font-weight: bold
+  
+}
+}
+</style>
 </head>
 <body>
 <div align="center">

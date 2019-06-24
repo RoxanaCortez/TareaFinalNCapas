@@ -10,6 +10,62 @@
 <meta charset="ISO-8859-1">
 <title>Nueva Sucursal</title>
 </head>
+<style>
+html,
+body {
+	height: 100%;
+	font-family: monospace;
+}
+
+h1{
+	color: #000;
+	text-align: center;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+h2{
+	color: #000;
+	text-align: center;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+p{
+	color: #787777;
+	 font-size: 18px;
+	
+}
+
+body {
+	margin: 0;
+	background:  #fff;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[type=submit] {
+  background-color: #8B0065;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size:12px;
+  line-height: 1.4;
+  padding: 10px;
+  width: 120px;
+  font-weight: bold
+  
+}
+}
+</style>
 <body>
 <div align="center">
 	<h2>Editar sucursal</h2>
@@ -47,7 +103,7 @@
 			<td><form:input type="text" name="gerente"  path="gerente" /></td>
 		</tr>
 		<tr>
-			<td colspan="2"><input type="submit" value="Agregar" /></td>
+			<td colspan="2"><input  type="submit" value="Guardar" /></td>
 		
 		</tr>
 		</table>

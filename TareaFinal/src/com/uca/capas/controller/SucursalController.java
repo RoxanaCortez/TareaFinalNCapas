@@ -3,15 +3,23 @@ package com.uca.capas.controller;
 import java.util.List;
 import java.util.Map;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+
+
+
 import com.uca.capas.domain.Sucursal;
+
+import com.uca.capas.repositories.SucursalRepository;
 import com.uca.capas.service.SucursalService;
 
 @Controller
@@ -20,7 +28,10 @@ public class SucursalController {
 	@Autowired
 	private SucursalService service;
 	
-	@RequestMapping("/")
+	
+
+	
+	@RequestMapping("/sucursales") //acá era solo /
 	public ModelAndView home() {
 		ModelAndView mav = new ModelAndView("index");
 		
@@ -42,7 +53,7 @@ public class SucursalController {
 	public String guardarSucursal(@ModelAttribute("sucursal") Sucursal sucursal) {
 		service.save(sucursal);
 		
-		return "redirect:/";
+		return "redirect:/sucursales";
 		
 	}
 	
@@ -54,6 +65,8 @@ public class SucursalController {
 		return mav;
 		
 	}
+	
+	
 	
 	@RequestMapping("/perfil")
 	public ModelAndView perfilSucursalForm(@RequestParam Integer codigo) {
@@ -67,7 +80,7 @@ public class SucursalController {
 	@RequestMapping("/delete")
 	public String eliminarSucursal(@RequestParam Integer codigo) {
 		service.delete(codigo);
-		return "redirect:/";
+		return "redirect:/sucursales";
 	}
 
 }

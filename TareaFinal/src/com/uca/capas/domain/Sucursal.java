@@ -1,9 +1,15 @@
 package com.uca.capas.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity 
@@ -21,10 +27,11 @@ public class Sucursal {
 	private String horario_c;
 	
 	
-	
-	
+
+
+
 	public Sucursal() {
-	
+		super();
 	}
 	
 	public Integer getCodigo() {
@@ -75,8 +82,7 @@ public class Sucursal {
 		this.horario_c = horario_c;
 	}
 	
-	
-	
+
 	
 	
 	

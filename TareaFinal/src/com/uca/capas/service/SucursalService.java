@@ -30,4 +30,6 @@ public class SucursalService {
 	public void delete(Integer codigo) {
 	repo.deleteById(codigo);
 	}
+	
+	
 }
