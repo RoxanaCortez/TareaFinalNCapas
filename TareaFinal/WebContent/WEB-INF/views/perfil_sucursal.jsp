@@ -4,12 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Perfil</title>
+<link href="resources/css/perfilStyle.css" rel = "stylesheet">
 </head>
 <body>
 <div align="center">
-	<h1>Sucursal</h1>
-	
+
+    <c:forEach items="${listSucursal}" var="sucursal">
+	<h1>${sucursal.nombre}</h1>
+	<form  action="${pageContext.request.contextPath}/sucursales"  method="post">
+			<input style="border-width:5px; border-style:solid; border-color:#8B0065; float: right; background-color:#8B0065; color:#fff"  type="submit" value="Regresar"/><br>
+		</form><br>
 	<table border="1" padding="5" >
 		<tr>
 			<th style="text-align: center;">Codigo</th>
@@ -21,7 +26,7 @@
 			<th style="text-align: center;">Gerente</th>
 			<th style="text-align: center;">Acción</th>
 		</tr>
-		<c:forEach items="${listSucursal}" var="sucursal">
+
 		<tr>
 		<td style="text-align: center;">${sucursal.codigo}</td>
 		<td>${sucursal.nombre}</td>
