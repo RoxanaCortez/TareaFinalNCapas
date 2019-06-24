@@ -42,8 +42,7 @@ public class InicioController {
 			mav.addObject("listSucursal", listSucursal);
 		}else {
 			mav.setViewName("home");
-			mav.addObject("hasError", "yes");
-			mav.addObject("response", "Credenciales invalidas");
+			
 		}
 		
 		return mav;

@@ -25,10 +25,6 @@ public class Sucursal {
 	private String gerente;
 	private String horario_a;
 	private String horario_c;
-	
-	
-
-
 
 	public Sucursal() {
 		super();
